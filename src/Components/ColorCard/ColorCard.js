@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 
 function ColorCard() {
   return (
-    <section>
-    this is the color card
-    </section>
+    <div class='color-card'>
+      <p>lock</p>
+      <p>######</p>
+    </div>
   );
 }
 

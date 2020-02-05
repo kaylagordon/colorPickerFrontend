@@ -1,0 +1,13 @@
+.color-card {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 15vw;
+    width: 15vw;
+    margin: 1vw;
+    p {
+      margin: 0;
+    }
+}

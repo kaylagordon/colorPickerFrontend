@@ -5,8 +5,7 @@ import PropTypes from 'prop-types';
 
 function ColorContainer() {
   return (
-    <section>
-    this is the color container
+    <section class='color-container'>
       <ColorCard />
       <ColorCard />
       <ColorCard />
