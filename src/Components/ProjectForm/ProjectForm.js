@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProjectForm.css';
+import './ProjectForm.scss';
 
 function ProjectForm() {
   return (

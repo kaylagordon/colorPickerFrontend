@@ -1,5 +1,5 @@
 import React from 'react';
-import './Palette.css';
+import './Palette.scss';
 
 function Palette() {
   return (

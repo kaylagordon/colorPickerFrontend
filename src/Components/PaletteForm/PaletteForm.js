@@ -1,5 +1,5 @@
 import React from 'react';
-import './PaletteForm.css';
+import './PaletteForm.scss';
 
 function PaletteForm() {
   return (

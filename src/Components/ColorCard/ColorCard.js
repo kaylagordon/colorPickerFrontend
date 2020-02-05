@@ -1,5 +1,5 @@
 import React from 'react';
-import './ColorCard.css';
+import './ColorCard.scss';
 
 function ColorCard() {
   return (

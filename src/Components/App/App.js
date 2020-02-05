@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import ColorContainer from '../ColorContainer/ColorContainer';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import ProjectForm from '../ProjectForm/ProjectForm';

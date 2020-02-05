@@ -1,5 +1,5 @@
 import React from 'react';
-import './Project.css';
+import './Project.scss';
 import Palette from '../Palette/Palette';
 
 function Project() {

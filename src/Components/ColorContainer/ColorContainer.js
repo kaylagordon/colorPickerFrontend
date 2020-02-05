@@ -1,5 +1,5 @@
 import React from 'react';
-import './ColorContainer.css';
+import './ColorContainer.scss';
 import ColorCard from '../ColorCard/ColorCard';
 
 function ColorContainer() {
