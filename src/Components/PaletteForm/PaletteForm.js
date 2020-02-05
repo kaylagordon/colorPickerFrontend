@@ -1,5 +1,6 @@
 import React from 'react';
 import './PaletteForm.scss';
+import PropTypes from 'prop-types';
 
 function PaletteForm() {
   return (

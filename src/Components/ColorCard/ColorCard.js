@@ -1,5 +1,6 @@
 import React from 'react';
 import './ColorCard.scss';
+import PropTypes from 'prop-types';
 
 function ColorCard() {
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Project.scss';
 import Palette from '../Palette/Palette';
+import PropTypes from 'prop-types';
 
 function Project() {
   return (
