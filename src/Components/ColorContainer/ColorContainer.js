@@ -7,11 +7,11 @@ function ColorContainer() {
   return (
     <section class='color-container'>
       <div class='color-card-container'>
-        <ColorCard />
-        <ColorCard />
-        <ColorCard />
-        <ColorCard />
-        <ColorCard />
+        <ColorCard id={1}/>
+        <ColorCard id={2}/>
+        <ColorCard id={3}/>
+        <ColorCard id={4}/>
+        <ColorCard id={5}/>
       </div>
       <button class='generate-palette-button'>Generate New Palette</button>
     </section>
