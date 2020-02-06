@@ -1,7 +1,9 @@
-export const addedPalette = (state = {}, action) => {
+export const Palette = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_PALETTE':
-      return action.palette;
+      return [...state, action.palette];
+    case 'DELETE_PALETTE':
+      return [...state].filter(palette => palette.id !== action.id);
     default:
       return state;
   }
