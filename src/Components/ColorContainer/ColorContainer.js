@@ -6,11 +6,14 @@ import PropTypes from 'prop-types';
 function ColorContainer() {
   return (
     <section class='color-container'>
-      <ColorCard />
-      <ColorCard />
-      <ColorCard />
-      <ColorCard />
-      <ColorCard />
+      <div class='color-card-container'>
+        <ColorCard />
+        <ColorCard />
+        <ColorCard />
+        <ColorCard />
+        <ColorCard />
+      </div>
+      <button class='generate-palette-button'>Generate New Palette</button>
     </section>
   );
 }

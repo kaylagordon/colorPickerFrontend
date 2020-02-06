@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 
 function ProjectForm() {
   return (
-    <section>
-    this is a project form
-    </section>
+    <form class='project-form'>
+      <p>Create New Project:</p>
+      <input type='text' />
+      <button class='submit-project-button'>Save Project</button>
+    </form>
   );
 }
 

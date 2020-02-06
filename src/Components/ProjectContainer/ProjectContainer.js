@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 function ProjectContainer() {
   return (
     <section>
-    this is a project container
       <Project />
       <Project />
     </section>
