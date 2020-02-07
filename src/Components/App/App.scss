@@ -2,3 +2,13 @@ main {
   text-align: center;
   font-family: 'Shadows Into Light', cursive;
 }
+
+button,
+select,
+input {
+  border: 1px solid black;
+  border-radius: 200px 5px 200px 5px/5px 255px 5px 215px;
+  font-size: 1.3vw;
+  padding: .4vw;
+  margin: .5vw;
+}
