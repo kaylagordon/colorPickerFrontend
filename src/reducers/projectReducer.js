@@ -1,4 +1,4 @@
-export const Project = (state = {}, action) => {
+export const Project = (state = [], action) => {
   switch (action.type) {
     case 'ADD_PROJECT':
       return [...state, action.project];
