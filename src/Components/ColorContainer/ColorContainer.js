@@ -5,15 +5,15 @@ import PropTypes from 'prop-types';
 
 function ColorContainer() {
   return (
-    <section class='color-container'>
-      <div class='color-card-container'>
+    <section className='color-container'>
+      <div className='color-card-container'>
         <ColorCard id={1}/>
         <ColorCard id={2}/>
         <ColorCard id={3}/>
         <ColorCard id={4}/>
         <ColorCard id={5}/>
       </div>
-      <button class='generate-palette-button'>Generate New Palette</button>
+      <button className='generate-palette-button'>Generate New Palette</button>
     </section>
   );
 }
