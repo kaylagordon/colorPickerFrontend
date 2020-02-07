@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 function Project() {
   return (
     <section>
-      this is a project
+      <h3>Project 1</h3>
       <Palette />
     </section>
   );

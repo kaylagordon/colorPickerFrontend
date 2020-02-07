@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 function App() {
   return (
     <main>
+      <h1>Palette Picker</h1>
       <ColorContainer />
       <PaletteForm />
       <ProjectForm />
