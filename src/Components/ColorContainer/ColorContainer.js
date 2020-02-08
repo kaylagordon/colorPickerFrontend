@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { addPalette } from '../../actions/index';
+import PaletteForm from '../PaletteForm/PaletteForm';
 import './ColorContainer.scss';
 import ColorCard from '../ColorCard/ColorCard';
 import PropTypes from 'prop-types';
@@ -13,6 +12,14 @@ export const ColorContainer = () => {
   const [bgColor4, setBGColor4] = useState({});
   const [bgColor5, setBGColor5] = useState({});
   
+  const currentPalette = {
+    bgColor1,
+    bgColor2,
+    bgColor3,
+    bgColor4,
+    bgColor5
+  }
+
   const generatePalette = () => {
     setBGColor1(Math.floor(Math.random()*16777215).toString(16));
     setBGColor2(Math.floor(Math.random()*16777215).toString(16));
@@ -37,9 +44,9 @@ export const ColorContainer = () => {
       <button 
         type='button' 
         className='generate-palette-button'
-        onClick={generatePalette}
-        >Generate New Palette
+        onClick={generatePalette}>Generate New Palette
       </button>
+      <PaletteForm currentPalette={currentPalette} />
     </section>
   );
 }

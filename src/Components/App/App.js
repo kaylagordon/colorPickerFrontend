@@ -11,7 +11,6 @@ function App() {
     <main>
       <h1>Palette Picker</h1>
       <ColorContainer />
-      <PaletteForm />
       <ProjectForm />
       <ProjectContainer />
     </main>
