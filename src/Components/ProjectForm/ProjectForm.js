@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { apiRequest } from '../../utils/api'; 
+import { addProject } from '../../actions/index';
 import './ProjectForm.scss';
 import PropTypes from 'prop-types';
 
 const ProjectForm = () => {
   const [projectName, setProjectName] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await apiRequest('projects', 'POST', { name: projectName });
-      console.log(await response.json());
+      const project = await response.json();
+      dispatch(addProject(project.name, project.id));
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
     }
   }
 
