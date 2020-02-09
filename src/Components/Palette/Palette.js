@@ -6,12 +6,12 @@ function Palette() {
   return (
     <section>
       <p>Palette 1</p>
-      <div class='color1'></div>
-      <div class='color2'></div>
-      <div class='color3'></div>
-      <div class='color4'></div>
-      <div class='color5'></div>
-      <button class='delete-palette-button'>X</button>
+      <div className='color1'></div>
+      <div className='color2'></div>
+      <div className='color3'></div>
+      <div className='color4'></div>
+      <div className='color5'></div>
+      <button className='delete-palette-button'>X</button>
     </section>
   );
 }

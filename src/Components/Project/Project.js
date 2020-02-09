@@ -3,10 +3,12 @@ import './Project.scss';
 import Palette from '../Palette/Palette';
 import PropTypes from 'prop-types';
 
-function Project() {
+function Project({ projectInfo }) {
+  const { name } = projectInfo;
+
   return (
     <section>
-      <h3>Project 1</h3>
+      <h3>{projectInfo.name}</h3>
       <Palette />
     </section>
   );
