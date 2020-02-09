@@ -25,8 +25,13 @@ export const ColorContainer = () => {
     // console.log(currentPalette);
   };
 
-  const lockColor = id => {
-
+  const lockColor = (event, id) => {
+    event.preventDefault();
+    setCurrentPalette({
+      ...currentPalette, [`color${id}`]: {
+        id: id, color: currentPalette[`color${id}`]['color'], locked: !currentPalette[`color${id}`]['locked']
+      }
+    })
   }
 
   useEffect(() => {

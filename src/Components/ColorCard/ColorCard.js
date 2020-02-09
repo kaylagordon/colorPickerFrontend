@@ -9,7 +9,7 @@ function ColorCard({ cardColor, lockColor }) {
     <div className={`color-card color-card${cardColor.id}`} style={{
       backgroundColor: `#${cardColor.color}`
     }}>
-      <button className='lock-button' onClick={lockColor(cardColor.id)}>lock</button>
+      <button className='lock-button' onClick={event => lockColor(event, cardColor.id)}>lock</button>
       <p>#{(`${cardColor.color}`).toUpperCase()}</p>
     </div>
   );
