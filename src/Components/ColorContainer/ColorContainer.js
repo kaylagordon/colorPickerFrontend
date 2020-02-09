@@ -14,15 +14,29 @@ export const ColorContainer = () => {
     color5: {id: 5, color: '', locked: false}
   });
 
+  const regeneratePalette = () => {
+    let ids = [1, 2, 3, 4, 5];
+    let newColors = {};
+
+    ids.forEach(id => {
+      if (!currentPalette[`color${id}`].locked) {
+        newColors[`color${id}`] = { id: id, color: Math.floor(Math.random()*16777215).toString(16), locked: false }
+      };
+    });
+
+    setCurrentPalette({
+      ...currentPalette, ...newColors
+    });
+  };
+
   const generatePalette = () => {
     setCurrentPalette({
-      color1: {id: 1, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
-      color2: {id: 2, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
-      color3: {id: 3, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
-      color4: {id: 4, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
-      color5: {id: 5, color: Math.floor(Math.random()*16777215).toString(16), locked: false}
-    });
-    // console.log(currentPalette);
+        color1: {id: 1, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
+        color2: {id: 2, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
+        color3: {id: 3, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
+        color4: {id: 4, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
+        color5: {id: 5, color: Math.floor(Math.random()*16777215).toString(16), locked: false}
+      });
   };
 
   const lockColor = (event, id) => {
@@ -31,8 +45,8 @@ export const ColorContainer = () => {
       ...currentPalette, [`color${id}`]: {
         id: id, color: currentPalette[`color${id}`]['color'], locked: !currentPalette[`color${id}`]['locked']
       }
-    })
-  }
+    });
+  };
 
   useEffect(() => {
     generatePalette();
@@ -50,7 +64,7 @@ export const ColorContainer = () => {
       <button
         type='button'
         className='generate-palette-button'
-        onClick={generatePalette}>Generate New Palette
+        onClick={regeneratePalette}>Generate New Palette
       </button>
       <PaletteForm currentPalette={currentPalette} />
     </section>
