@@ -1,6 +1,6 @@
 export const apiRequest = async (urlPath, method, data = null) => {
   let options;
-  const url = process.env.REACT_APP_BACKEND_URL + '/api/v1' + urlPath;
+  const url = process.env.REACT_APP_BACKEND_URL + '/api/v1/' + urlPath;
 
   switch (method) {
     case 'DELETE':
@@ -14,7 +14,8 @@ export const apiRequest = async (urlPath, method, data = null) => {
         method,
         body: JSON.stringify(data),
         headers: {
-          'Content-type': 'application/json'
+          'Content-type': 'application/json',
+          'Accept': 'application/json'
         }
       };
   }
@@ -23,8 +24,6 @@ export const apiRequest = async (urlPath, method, data = null) => {
 
   if (response.status === 204) return 'success';
 
-  const json = await response.json();
-
-  if (response.ok) return json;
-  throw Error(json);
+  if (response.ok) return response;
+  throw Error(response);
 };
