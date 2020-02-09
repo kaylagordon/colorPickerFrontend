@@ -6,42 +6,28 @@ import PropTypes from 'prop-types';
 
 export const ColorContainer = () => {
 
-  const [bgColor1, setBGColor1] = useState({});
-  const [bgColor2, setBGColor2] = useState({});
-  const [bgColor3, setBGColor3] = useState({});
-  const [bgColor4, setBGColor4] = useState({});
-  const [bgColor5, setBGColor5] = useState({});
-
-  const currentPalette = {
-    bgColor1,
-    bgColor2,
-    bgColor3,
-    bgColor4,
-    bgColor5
-  };
+  const [currentPalette, setCurrentPalette] = useState({
+    color1: {id: 1, color: '', locked: false},
+    color2: {id: 2, color: '', locked: false},
+    color3: {id: 3, color: '', locked: false},
+    color4: {id: 4, color: '', locked: false},
+    color5: {id: 5, color: '', locked: false}
+  });
 
   const generatePalette = () => {
-    setBGColor1({
-      color: Math.floor(Math.random()*16777215).toString(16),
-      locked: false
+    setCurrentPalette({
+      color1: {id: 1, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
+      color2: {id: 2, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
+      color3: {id: 3, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
+      color4: {id: 4, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
+      color5: {id: 5, color: Math.floor(Math.random()*16777215).toString(16), locked: false}
     });
-    setBGColor2({
-      color: Math.floor(Math.random()*16777215).toString(16),
-      locked: false
-    });
-    setBGColor3({
-      color: Math.floor(Math.random()*16777215).toString(16),
-      locked: false
-    });
-    setBGColor4({
-      color: Math.floor(Math.random()*16777215).toString(16),
-      locked: false
-    });
-    setBGColor5({
-      color: Math.floor(Math.random()*16777215).toString(16),
-      locked: false
-    });
+    // console.log(currentPalette);
   };
+
+  const lockColor = id => {
+
+  }
 
   useEffect(() => {
     generatePalette();
@@ -50,11 +36,11 @@ export const ColorContainer = () => {
   return (
     <section className='color-container'>
       <div className='color-card-container'>
-        <ColorCard id={1} bgColor={bgColor1}/>
-        <ColorCard id={2} bgColor={bgColor2}/>
-        <ColorCard id={3} bgColor={bgColor3}/>
-        <ColorCard id={4} bgColor={bgColor4}/>
-        <ColorCard id={5} bgColor={bgColor5}/>
+        <ColorCard cardColor={currentPalette.color1} lockColor={lockColor}/>
+        <ColorCard cardColor={currentPalette.color2} lockColor={lockColor}/>
+        <ColorCard cardColor={currentPalette.color3} lockColor={lockColor}/>
+        <ColorCard cardColor={currentPalette.color4} lockColor={lockColor}/>
+        <ColorCard cardColor={currentPalette.color5} lockColor={lockColor}/>
       </div>
       <button
         type='button'

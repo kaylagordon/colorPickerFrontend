@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import './ColorCard.scss';
 import PropTypes from 'prop-types';
 
-function ColorCard({ id, bgColor }) {
-  let randomColor = Math.floor(Math.random()*16777215).toString(16);
+function ColorCard({ cardColor, lockColor }) {
   const [ locked, switchLock ] = useState();
 
   return (
-    <div className={`color-card color-card${id}`} style={{
-      backgroundColor: `#${bgColor.color}`
+    <div className={`color-card color-card${cardColor.id}`} style={{
+      backgroundColor: `#${cardColor.color}`
     }}>
-      <p>lock</p>
-      <p>#{(`${bgColor.color}`).toUpperCase()}</p>
+      <button className='lock-button' onClick={lockColor(cardColor.id)}>lock</button>
+      <p>#{(`${cardColor.color}`).toUpperCase()}</p>
     </div>
   );
 };
