@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { apiRequest } from '../../utils/api'; 
 import { addProject } from '../../actions/index';
 import './ProjectForm.scss';
