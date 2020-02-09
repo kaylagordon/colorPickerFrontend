@@ -29,3 +29,8 @@ export const deleteProject = id => ({
   type: 'DELETE_PALETTE',
   id
 });
+
+export const setAllProjects = (projects) => ({
+  type: 'SET_ALL_PROJECTS',
+  projects
+});
