@@ -11,21 +11,36 @@ export const ColorContainer = () => {
   const [bgColor3, setBGColor3] = useState({});
   const [bgColor4, setBGColor4] = useState({});
   const [bgColor5, setBGColor5] = useState({});
-  
+
   const currentPalette = {
     bgColor1,
     bgColor2,
     bgColor3,
     bgColor4,
     bgColor5
-  }
+  };
 
   const generatePalette = () => {
-    setBGColor1(Math.floor(Math.random()*16777215).toString(16));
-    setBGColor2(Math.floor(Math.random()*16777215).toString(16));
-    setBGColor3(Math.floor(Math.random()*16777215).toString(16));
-    setBGColor4(Math.floor(Math.random()*16777215).toString(16));
-    setBGColor5(Math.floor(Math.random()*16777215).toString(16));
+    setBGColor1({
+      color: Math.floor(Math.random()*16777215).toString(16),
+      locked: false
+    });
+    setBGColor2({
+      color: Math.floor(Math.random()*16777215).toString(16),
+      locked: false
+    });
+    setBGColor3({
+      color: Math.floor(Math.random()*16777215).toString(16),
+      locked: false
+    });
+    setBGColor4({
+      color: Math.floor(Math.random()*16777215).toString(16),
+      locked: false
+    });
+    setBGColor5({
+      color: Math.floor(Math.random()*16777215).toString(16),
+      locked: false
+    });
   };
 
   useEffect(() => {
@@ -41,16 +56,14 @@ export const ColorContainer = () => {
         <ColorCard id={4} bgColor={bgColor4}/>
         <ColorCard id={5} bgColor={bgColor5}/>
       </div>
-      <button 
-        type='button' 
+      <button
+        type='button'
         className='generate-palette-button'
         onClick={generatePalette}>Generate New Palette
       </button>
       <PaletteForm currentPalette={currentPalette} />
     </section>
   );
-}
+};
 
 export default ColorContainer;
-
-
