@@ -8,13 +8,12 @@ import PropTypes from 'prop-types';
 
 const ProjectContainer = () => {
   const dispatch = useDispatch();
-  const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const displayedProjects = useSelector(state => state.projects);
 
   const fetchProjects = async () => {
     try {
       const response = await apiRequest('projects', 'GET');
-      setProjects(response);
       dispatch(setAllProjects(response));
       setLoading(false);
     } catch (error) {
@@ -32,7 +31,7 @@ const ProjectContainer = () => {
 
   return (
     <section>
-      {projects.map(project => <Project projectInfo={project} />)}
+      {displayedProjects.reverse().map(project => <Project key={project.id} projectInfo={project} />)}
     </section>
   );
 };

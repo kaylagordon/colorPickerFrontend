@@ -13,8 +13,7 @@ const ProjectForm = () => {
     e.preventDefault();
     try {
       const response = await apiRequest('projects', 'POST', { name: projectName });
-      const project = await response.json();
-      dispatch(addProject(project.name, project.id));
+      dispatch(addProject(response.name, response.id));
     } catch (error) {
       console.log(error);
     }
