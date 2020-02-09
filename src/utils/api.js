@@ -24,6 +24,6 @@ export const apiRequest = async (urlPath, method, data = null) => {
 
   if (response.status === 204) return 'success';
 
-  if (response.ok) return response;
+  if (response.ok) return response.json();
   throw Error(response);
 };
