@@ -9,9 +9,9 @@ function ColorCard({ cardColor, lockColor }) {
     if (cardColor.locked) {
       return `unlock`;
     } else {
-      return `lock`
-    }
-  }
+      return `lock`;
+    };
+  };
 
   return (
     <div className={`color-card color-card${cardColor.id}`} style={{
