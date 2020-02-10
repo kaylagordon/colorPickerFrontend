@@ -6,26 +6,46 @@ import PropTypes from 'prop-types';
 
 export const ColorContainer = () => {
 
-  const [bgColor1, setBGColor1] = useState({});
-  const [bgColor2, setBGColor2] = useState({});
-  const [bgColor3, setBGColor3] = useState({});
-  const [bgColor4, setBGColor4] = useState({});
-  const [bgColor5, setBGColor5] = useState({});
-  
-  const currentPalette = {
-    bgColor1,
-    bgColor2,
-    bgColor3,
-    bgColor4,
-    bgColor5
-  }
+  const [currentPalette, setCurrentPalette] = useState({
+    color1: {id: 1, color: '', locked: false},
+    color2: {id: 2, color: '', locked: false},
+    color3: {id: 3, color: '', locked: false},
+    color4: {id: 4, color: '', locked: false},
+    color5: {id: 5, color: '', locked: false}
+  });
+
+  const regeneratePalette = () => {
+    let ids = [1, 2, 3, 4, 5];
+    let newColors = {};
+
+    ids.forEach(id => {
+      if (!currentPalette[`color${id}`].locked) {
+        newColors[`color${id}`] = { id: id, color: Math.floor(Math.random()*16777215).toString(16), locked: false }
+      };
+    });
+
+    setCurrentPalette({
+      ...currentPalette, ...newColors
+    });
+  };
 
   const generatePalette = () => {
-    setBGColor1(Math.floor(Math.random()*16777215).toString(16));
-    setBGColor2(Math.floor(Math.random()*16777215).toString(16));
-    setBGColor3(Math.floor(Math.random()*16777215).toString(16));
-    setBGColor4(Math.floor(Math.random()*16777215).toString(16));
-    setBGColor5(Math.floor(Math.random()*16777215).toString(16));
+    setCurrentPalette({
+        color1: {id: 1, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
+        color2: {id: 2, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
+        color3: {id: 3, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
+        color4: {id: 4, color: Math.floor(Math.random()*16777215).toString(16), locked: false},
+        color5: {id: 5, color: Math.floor(Math.random()*16777215).toString(16), locked: false}
+      });
+  };
+
+  const lockColor = (event, id) => {
+    event.preventDefault();
+    setCurrentPalette({
+      ...currentPalette, [`color${id}`]: {
+        id: id, color: currentPalette[`color${id}`]['color'], locked: !currentPalette[`color${id}`]['locked']
+      }
+    });
   };
 
   useEffect(() => {
@@ -35,22 +55,20 @@ export const ColorContainer = () => {
   return (
     <section className='color-container'>
       <div className='color-card-container'>
-        <ColorCard id={1} bgColor={bgColor1}/>
-        <ColorCard id={2} bgColor={bgColor2}/>
-        <ColorCard id={3} bgColor={bgColor3}/>
-        <ColorCard id={4} bgColor={bgColor4}/>
-        <ColorCard id={5} bgColor={bgColor5}/>
+        <ColorCard cardColor={currentPalette.color1} lockColor={lockColor}/>
+        <ColorCard cardColor={currentPalette.color2} lockColor={lockColor}/>
+        <ColorCard cardColor={currentPalette.color3} lockColor={lockColor}/>
+        <ColorCard cardColor={currentPalette.color4} lockColor={lockColor}/>
+        <ColorCard cardColor={currentPalette.color5} lockColor={lockColor}/>
       </div>
-      <button 
-        type='button' 
+      <button
+        type='button'
         className='generate-palette-button'
-        onClick={generatePalette}>Generate New Palette
+        onClick={regeneratePalette}>Generate New Palette
       </button>
       <PaletteForm currentPalette={currentPalette} />
     </section>
   );
-}
+};
 
 export default ColorContainer;
-
-
