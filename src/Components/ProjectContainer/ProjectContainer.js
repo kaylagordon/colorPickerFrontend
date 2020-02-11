@@ -24,7 +24,6 @@ const ProjectContainer = () => {
   const fetchPalettes = async () => {
     try {
       const palettes = await apiRequest('palettes', 'GET');
-      console.log(palettes);
       dispatch(setAllPalettes(palettes.palettes));
       setLoading(false);
     } catch (error) {
