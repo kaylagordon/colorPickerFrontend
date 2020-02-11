@@ -35,11 +35,16 @@ function PaletteForm({ currentPalette }) {
     setSelectedProject(event.target.value);
   };
 
+  const projectsToDisplay = useSelector(state => state.projects);
+
   return (
-    <form className='palette-form'>
-      <select onChange={event => changeSelection(event)}>
-        <option id={1} value={1}>Project 1</option>
-        <option id={2} value={2}>Project 2</option>
+    <form className='palette-form' onSubmit={handleSubmit}>
+      <select >
+        {projectsToDisplay.map(project => {
+          return (
+            <option id={project.id} value={project.id}>{project.name}</option>
+          )
+        })}
       </select>
       <input
         type='text'
