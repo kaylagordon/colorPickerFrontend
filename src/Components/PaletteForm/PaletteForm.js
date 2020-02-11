@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './PaletteForm.scss';
+import { apiRequest } from '../../utils/api';
+import { addPalette } from '../../actions/index';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { addPalette } from '../../actions/index';
 
 function PaletteForm({ currentPalette }) {
 
   const [paletteName, setPaletteName] = useState('');
   const [selectedProject, setSelectedProject] = useState('1');
+  const dispatch = useDispatch();
 
   const savePalette = (event) => {
     let palette =  {
@@ -24,7 +26,7 @@ function PaletteForm({ currentPalette }) {
 
 
     //save to global store
-
+    dispatch(addPalette(palette));
 
   }
 

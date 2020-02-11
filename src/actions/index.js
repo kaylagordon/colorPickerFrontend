@@ -1,15 +1,6 @@
-export const addPalette = (id, color1, color2, color3, color4, color5, name, project_id) => ({
+export const addPalette = (palette) => ({
   type: 'ADD_PALETTE',
-  palette: {
-    id,
-    color1,
-    color2,
-    color3,
-    color4,
-    color5,
-    name,
-    project_id
-  }
+  palette
 });
 
 export const addProject = (name, id) => ({
