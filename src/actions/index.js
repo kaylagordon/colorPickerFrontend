@@ -1,15 +1,6 @@
-export const addPalette = (id, color1, color2, color3, color4, color5, name, project_id) => ({
+export const addPalette = (palette) => ({
   type: 'ADD_PALETTE',
-  palette: {
-    id,
-    color1,
-    color2,
-    color3,
-    color4,
-    color5,
-    name,
-    project_id
-  }
+  palette
 });
 
 export const addProject = (name, id) => ({
@@ -33,4 +24,9 @@ export const deleteProject = id => ({
 export const setAllProjects = (projects) => ({
   type: 'SET_ALL_PROJECTS',
   projects
+});
+
+export const setAllPalettes = (palettes) => ({
+  type: 'SET_ALL_PALETTES',
+  palettes
 });
