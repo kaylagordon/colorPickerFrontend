@@ -6,11 +6,21 @@ function Palette({ palette }) {
   return (
     <section className='saved-palette-container'>
       <p>{palette.name}:</p>
-      <div className='color1'>x</div>
-      <div className='color2'>x</div>
-      <div className='color3'>x</div>
-      <div className='color4'>x</div>
-      <div className='color5'>x</div>
+      <div className='saved-palette-color' style={{
+        backgroundColor: `#${palette.color1}`
+      }}>x</div>
+      <div className='saved-palette-color' style={{
+        backgroundColor: `#${palette.color2}`
+      }}>x</div>
+      <div className='saved-palette-color' style={{
+        backgroundColor: `#${palette.color3}`
+      }}>x</div>
+      <div className='saved-palette-color' style={{
+        backgroundColor: `#${palette.color4}`
+      }}>x</div>
+      <div className='saved-palette-color' style={{
+        backgroundColor: `#${palette.color5}`
+      }}>x</div>
       <button className='delete-palette-button'>X</button>
     </section>
   );
