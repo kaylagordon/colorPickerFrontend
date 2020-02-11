@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { apiRequest } from '../../utils/api';
-import { setAllProjects } from '../../actions'
+import { setAllProjects, setAllPalettes } from '../../actions'
 import './ProjectContainer.scss';
 import Project from '../Project/Project';
 import PropTypes from 'prop-types';
@@ -10,28 +10,44 @@ const ProjectContainer = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
   const displayedProjects = useSelector(state => state.projects);
+  const palettes = useSelector(state => state.palettes);
 
   const fetchProjects = async () => {
     try {
-      const response = await apiRequest('projects', 'GET');
-      dispatch(setAllProjects(response));
-      setLoading(false);
+      const projects = await apiRequest('projects', 'GET');
+      dispatch(setAllProjects(projects));
     } catch (error) {
       console.log(error);
     }
   };
 
+  const fetchPalettes = async () => {
+    try {
+      const palettes = await apiRequest('palettes', 'GET');
+      console.log(palettes);
+      dispatch(setAllPalettes(palettes.palettes));
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   useEffect(() => {
     fetchProjects();
+    fetchPalettes();
   }, []);
 
-  if (loading) {
-    return <h2>Loading...</h2>
-  };
+  const displayProjects = () => {
+    if (loading) {
+      return <h2>Loading...</h2>
+    } else {
+      return displayedProjects.reverse().map(project => <Project key={project.id} projectInfo={project} palettes={palettes}/>)
+    }
+  }
 
   return (
     <section>
-      {displayedProjects.reverse().map(project => <Project key={project.id} projectInfo={project} />)}
+      {displayProjects()}
     </section>
   );
 };

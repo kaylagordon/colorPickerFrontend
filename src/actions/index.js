@@ -25,3 +25,8 @@ export const setAllProjects = (projects) => ({
   type: 'SET_ALL_PROJECTS',
   projects
 });
+
+export const setAllPalettes = (palettes) => ({
+  type: 'SET_ALL_PALETTES',
+  palettes
+});
