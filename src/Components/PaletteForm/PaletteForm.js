@@ -11,7 +11,7 @@ function PaletteForm({ currentPalette }) {
   const [selectedProject, setSelectedProject] = useState('1');
   const dispatch = useDispatch();
 
-  const savePalette = (event) => {
+  const savePalette = async event => {
     let palette =  {
       project_id: selectedProject,
       color1: currentPalette.color1.color,
@@ -22,17 +22,18 @@ function PaletteForm({ currentPalette }) {
       name: paletteName
     };
 
-    //post
-
-
-    //save to global store
     dispatch(addPalette(palette));
 
-  }
+    try {
+      const response = await apiRequest('palettes', 'POST', palette);
+    } catch (error) {
+      console.log(error);
+    };
+  };
 
   const changeSelection = event => {
     setSelectedProject(event.target.value);
-  }
+  };
 
   return (
     <form className='palette-form'>
@@ -51,6 +52,6 @@ function PaletteForm({ currentPalette }) {
       </button>
     </form>
   );
-}
+};
 
 export default PaletteForm;
