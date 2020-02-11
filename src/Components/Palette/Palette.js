@@ -8,19 +8,19 @@ function Palette({ palette }) {
       <p>{palette.name}:</p>
       <div className='saved-palette-color' style={{
         backgroundColor: `#${palette.color1}`
-      }}>x</div>
+      }}></div>
       <div className='saved-palette-color' style={{
         backgroundColor: `#${palette.color2}`
-      }}>x</div>
+      }}></div>
       <div className='saved-palette-color' style={{
         backgroundColor: `#${palette.color3}`
-      }}>x</div>
+      }}></div>
       <div className='saved-palette-color' style={{
         backgroundColor: `#${palette.color4}`
-      }}>x</div>
+      }}></div>
       <div className='saved-palette-color' style={{
         backgroundColor: `#${palette.color5}`
-      }}>x</div>
+      }}></div>
       <button className='delete-palette-button'>X</button>
     </section>
   );
