@@ -1,6 +1,6 @@
 export const apiRequest = async (urlPath, method, data = null) => {
   let options;
-  const url = process.env.REACT_APP_BACKEND_URL + '/api/v1/' + urlPath;
+  const url = 'https://palettepickerapp.herokuapp.com/api/v1/' + urlPath;
 
   switch (method) {
     case 'DELETE':
