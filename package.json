@@ -45,6 +45,10 @@
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "coveragePathIgnorePatterns": [
+      "src/index.js",
+      "src/serviceWorker.js"
     ]
   }
 }

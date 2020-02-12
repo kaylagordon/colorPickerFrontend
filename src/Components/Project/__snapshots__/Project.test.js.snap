@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Project should match the snapshot 1`] = `
+<section
+  className="saved-project-container"
+>
+  <div
+    className="saved-project-title"
+  >
+    <h3>
+      Test
+    </h3>
+    <button
+      className="delete-palette-button"
+      onClick={[Function]}
+    >
+      X
+    </button>
+  </div>
+  <p>
+    No palettes
+  </p>
+</section>
+`;
