@@ -4,7 +4,14 @@ export const apiRequest = async (urlPath, method, data = null) => {
 
   switch (method) {
     case 'DELETE':
-      options = null;
+      options = {
+        method,
+        body: JSON.stringify({ id: data }),
+        headers: {
+          'Content-type': 'application/json',
+          'Accept': 'application/json'
+        }
+      };
       break;
     case 'GET':
       options = data;
@@ -18,12 +25,12 @@ export const apiRequest = async (urlPath, method, data = null) => {
           'Accept': 'application/json'
         }
       };
-  }
+  };
 
   const response = await fetch(url, options);
 
   if (response.status === 204) return 'success';
 
   if (response.ok) return response.json();
-  throw Error(response);
+
 };
