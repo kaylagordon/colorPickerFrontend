@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { apiRequest } from '../../utils/api';
+import { deleteProject } from '../../actions/index';
 import './Project.scss';
 import Palette from '../Palette/Palette';
 import PropTypes from 'prop-types';
@@ -21,13 +22,13 @@ function Project({ projectInfo, palettes }) {
 
   const handleClick = async () => {
     const body = projectInfo;
-
     try {
       const response = await apiRequest(`projects`, 'DELETE', body);
       console.log(response);
     } catch (error) {
       console.log(error);
     }
+    dispatch(deleteProject(body.id));
   }
 
   return (

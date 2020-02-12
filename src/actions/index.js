@@ -17,7 +17,7 @@ export const deletePalette = id => ({
 });
 
 export const deleteProject = id => ({
-  type: 'DELETE_PALETTE',
+  type: 'DELETE_PROJECT',
   id
 });
 
