@@ -4,7 +4,14 @@ export const apiRequest = async (urlPath, method, data = null) => {
 
   switch (method) {
     case 'DELETE':
-      options = null;
+        options = {
+          method,
+          body: JSON.stringify(data),
+          headers: {
+            'Content-type': 'application/json',
+            'Accept': 'application/json'
+          }
+        };
       break;
     case 'GET':
       options = data;

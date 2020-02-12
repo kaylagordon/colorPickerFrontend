@@ -11,19 +11,32 @@ function Project({ projectInfo, palettes }) {
   const { name, id } = projectInfo;
 
   const displayPalettes = () => {
-
     const projectPalettes = palettes.filter(palette => parseInt(palette.project_id) === id);
 
     if (!projectPalettes.length) {
       return <p>No palettes</p>;
     }
-
     return projectPalettes.map(palette => <Palette palette={palette}/>)
   };
 
+  const handleClick = async () => {
+    const body = projectInfo;
+
+    try {
+      const response = await apiRequest(`projects`, 'DELETE', body);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <section>
-      <h3>{projectInfo.name}</h3>
+      <h3>{name}</h3>
+      <button 
+        className='delete-palette-button'
+        onClick={handleClick}>X
+      </button>
       {displayPalettes()}
     </section>
   );
