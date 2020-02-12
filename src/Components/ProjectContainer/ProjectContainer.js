@@ -40,7 +40,7 @@ const ProjectContainer = () => {
     if (loading) {
       return <h2>Loading...</h2>
     } else {
-      return displayedProjects.reverse().map(project => <Project key={project.id} projectInfo={project} palettes={palettes}/>)
+      return displayedProjects.sort((a, b) => b.id - a.id).map(project => <Project key={project.id} projectInfo={project} palettes={palettes}/>)
     };
   };
 
