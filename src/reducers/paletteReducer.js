@@ -1,4 +1,4 @@
-export const Palette = (state = [], action) => {
+export const paletteReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_PALETTE':
       return [...state, action.palette];

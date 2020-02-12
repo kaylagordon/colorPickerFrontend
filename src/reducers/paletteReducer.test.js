@@ -1,10 +1,10 @@
-import { Palette } from './paletteReducer';
+import { paletteReducer } from './paletteReducer';
 
 describe('paletteReducer', () => {
   it('should return the initial state', () => {
     const expected = [];
 
-    const result = Palette(undefined, {});
+    const result = paletteReducer(undefined, {});
 
     expect(result).toEqual(expected);
   });
@@ -28,7 +28,7 @@ describe('paletteReducer', () => {
       palette
     };
 
-    const result = Palette(initialState, action);
+    const result = paletteReducer(initialState, action);
 
     expect(result).toEqual(expected);
   });
@@ -70,7 +70,7 @@ describe('paletteReducer', () => {
       id
     };
 
-    const result = Palette(initialState, action);
+    const result = paletteReducer(initialState, action);
 
     expect(result).toEqual(expected);
   });
@@ -121,7 +121,7 @@ describe('paletteReducer', () => {
       palettes
     };
 
-    const result = Palette(initialState, action);
+    const result = paletteReducer(initialState, action);
 
     expect(result).toEqual(expected);
   });
