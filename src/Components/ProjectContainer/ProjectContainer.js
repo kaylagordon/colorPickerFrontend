@@ -15,7 +15,7 @@ const ProjectContainer = () => {
   const fetchProjects = async () => {
     try {
       const projects = await apiRequest('projects', 'GET');
-      dispatch(setAllProjects(projects));
+      dispatch(setAllProjects(projects.projects));
     } catch (error) {
       console.log(error);
     };

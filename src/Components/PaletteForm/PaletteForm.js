@@ -32,8 +32,8 @@ function PaletteForm({ currentPalette }) {
   };
 
   const changeSelection = event => {
-    let poop = event.target.value;
-    setSelectedProject(poop);
+    let option = event.target.value;
+    setSelectedProject(option);
   };
 
   const projectsToDisplay = useSelector(state => state.projects);
