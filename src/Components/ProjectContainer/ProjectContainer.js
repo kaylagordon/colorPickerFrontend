@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { apiRequest } from '../../utils/api';
-import { setAllProjects, setAllPalettes } from '../../actions'
+import { setAllProjects, setAllPalettes } from '../../actions';
 import './ProjectContainer.scss';
 import Project from '../Project/Project';
 import PropTypes from 'prop-types';
@@ -18,7 +18,7 @@ const ProjectContainer = () => {
       dispatch(setAllProjects(projects));
     } catch (error) {
       console.log(error);
-    }
+    };
   };
 
   const fetchPalettes = async () => {
@@ -28,8 +28,8 @@ const ProjectContainer = () => {
       setLoading(false);
     } catch (error) {
       console.log(error);
-    }
-  }
+    };
+  };
 
   useEffect(() => {
     fetchProjects();
@@ -40,9 +40,9 @@ const ProjectContainer = () => {
     if (loading) {
       return <h2>Loading...</h2>
     } else {
-      return displayedProjects.reverse().map(project => <Project key={project.id} projectInfo={project} palettes={palettes}/>)
-    }
-  }
+      return displayedProjects.sort((a, b) => b.id - a.id).map(project => <Project key={project.id} projectInfo={project} palettes={palettes}/>)
+    };
+  };
 
   return (
     <section>

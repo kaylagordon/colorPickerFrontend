@@ -25,12 +25,12 @@ export const apiRequest = async (urlPath, method, data = null) => {
           'Accept': 'application/json'
         }
       };
-  }
+  };
 
   const response = await fetch(url, options);
 
   if (response.status === 204) return 'success';
 
   if (response.ok) return response.json();
-  throw Error(response);
+
 };

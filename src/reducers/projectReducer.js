@@ -8,5 +8,5 @@ export const Project = (state = [], action) => {
       return action.projects;
     default:
       return state;
-  }
+  };
 };
