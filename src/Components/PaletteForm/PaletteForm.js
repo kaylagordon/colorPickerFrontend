@@ -43,7 +43,7 @@ function PaletteForm({ currentPalette }) {
       <select value={selectedProject} onChange={changeSelection}>
         {projectsToDisplay.map(project => {
           return (
-            <option id={project.id} value={project.id}>{project.name}</option>
+            <option id={project.id} value={project.id} key={project.id}>{project.name}</option>
           )
         })}
       </select>
