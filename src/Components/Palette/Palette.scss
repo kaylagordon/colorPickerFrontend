@@ -1,17 +1,21 @@
 .saved-palette-container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin-top: .5vw;
   button {
     background-color: transparent;
     border: none;
   };
+  p {
+    margin: 0;
+    font-size: 1.8vw;
+  }
 };
 
 .saved-palette-color {
   border: 1px solid black;
   border-radius: 200px 5px 200px 5px/5px 255px 5px 215px;
   margin: .2vw;
-  width: 1.3vw;
-  height: 1.3vw;
+  width: 2.4vw;
+  height: 2.4vw;
 }

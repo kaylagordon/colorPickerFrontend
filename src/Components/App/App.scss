@@ -1,16 +1,17 @@
 main {
   text-align: center;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Patrick Hand', cursive;
 }
 
 button,
 select,
 input {
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 200px 5px 200px 5px/5px 255px 5px 215px;
-  font-size: 1.3vw;
+  font-size: 1.8vw;
+  padding: .3vw;
   cursor: pointer;
   padding: .4vw;
   margin: .5vw;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Patrick Hand', cursive;
 }

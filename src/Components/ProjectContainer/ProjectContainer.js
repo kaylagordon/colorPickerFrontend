@@ -45,7 +45,7 @@ const ProjectContainer = () => {
   };
 
   return (
-    <section>
+    <section className='projects-container'>
       {displayProjects()}
     </section>
   );

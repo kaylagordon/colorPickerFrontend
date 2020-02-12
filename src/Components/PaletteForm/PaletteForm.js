@@ -52,7 +52,7 @@ function PaletteForm({ currentPalette }) {
         onChange={(e) => setPaletteName(e.target.value)}/>
       <button
         type='button'
-        className='submit-palette'
+        className='submit-palette-button'
         onClick={savePalette}
       >Save Palette
       </button>
