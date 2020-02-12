@@ -6,7 +6,7 @@ export const apiRequest = async (urlPath, method, data = null) => {
     case 'DELETE':
       options = {
         method,
-        body: JSON.stringify({ id: data }),
+        body: JSON.stringify(data),
         headers: {
           'Content-type': 'application/json',
           'Accept': 'application/json'

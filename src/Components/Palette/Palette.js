@@ -10,7 +10,10 @@ function Palette({ palette }) {
 
   const removePalette = () => {
     dispatch(deletePalette(palette.id));
-    apiRequest('palettes', 'DELETE', palette.id);
+    const body = {
+      id: palette.id
+    }
+    apiRequest('palettes', 'DELETE', body);
   };
 
   return (
