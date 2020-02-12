@@ -32,12 +32,14 @@ function Project({ projectInfo, palettes }) {
   }
 
   return (
-    <section>
-      <h3>{name}</h3>
-      <button 
-        className='delete-palette-button'
-        onClick={handleClick}>X
-      </button>
+    <section className='saved-project-container'>
+      <div className='saved-project-title'>
+        <h3>{name}</h3>
+        <button
+          className='delete-palette-button'
+          onClick={handleClick}>X
+        </button>
+      </div>
       {displayPalettes()}
     </section>
   );

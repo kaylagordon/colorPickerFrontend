@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { apiRequest } from '../../utils/api'; 
+import { apiRequest } from '../../utils/api';
 import { addProject } from '../../actions/index';
 import './ProjectForm.scss';
 import PropTypes from 'prop-types';
@@ -21,11 +21,11 @@ const ProjectForm = () => {
 
   return (
     <form className='project-form' onSubmit={(e) => handleSubmit(e)}>
-      <p>Create New Project:</p>
-      <input 
-        type='text' 
+      <h4>Create New Project:</h4>
+      <input
+        type='text'
         onChange={(e) => setProjectName(e.target.value)}/>
-      <button 
+      <button
         type='submit'
         className='submit-project-button'>Save Project
       </button>
