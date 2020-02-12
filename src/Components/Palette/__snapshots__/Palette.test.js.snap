@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Palette should match the snapshot 1`] = `
+<section
+  className="saved-palette-container"
+>
+  <p>
+    test
+    :
+  </p>
+  <div
+    className="saved-palette-color"
+    style={
+      Object {
+        "backgroundColor": "#FFF",
+      }
+    }
+  />
+  <div
+    className="saved-palette-color"
+    style={
+      Object {
+        "backgroundColor": "#FFF",
+      }
+    }
+  />
+  <div
+    className="saved-palette-color"
+    style={
+      Object {
+        "backgroundColor": "#FFF",
+      }
+    }
+  />
+  <div
+    className="saved-palette-color"
+    style={
+      Object {
+        "backgroundColor": "#FFF",
+      }
+    }
+  />
+  <div
+    className="saved-palette-color"
+    style={
+      Object {
+        "backgroundColor": "#FFF",
+      }
+    }
+  />
+  <button
+    className="delete-palette-button"
+    onClick={[Function]}
+  >
+    X
+  </button>
+</section>
+`;

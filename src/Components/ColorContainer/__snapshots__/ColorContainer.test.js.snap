@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorContainer should match the snapshot 1`] = `
+<section
+  className="color-container"
+>
+  <div
+    className="color-card-container"
+  >
+    <ColorCard
+      cardColor={
+        Object {
+          "color": "",
+          "id": 1,
+          "locked": false,
+        }
+      }
+      lockColor={[Function]}
+    />
+    <ColorCard
+      cardColor={
+        Object {
+          "color": "",
+          "id": 2,
+          "locked": false,
+        }
+      }
+      lockColor={[Function]}
+    />
+    <ColorCard
+      cardColor={
+        Object {
+          "color": "",
+          "id": 3,
+          "locked": false,
+        }
+      }
+      lockColor={[Function]}
+    />
+    <ColorCard
+      cardColor={
+        Object {
+          "color": "",
+          "id": 4,
+          "locked": false,
+        }
+      }
+      lockColor={[Function]}
+    />
+    <ColorCard
+      cardColor={
+        Object {
+          "color": "",
+          "id": 5,
+          "locked": false,
+        }
+      }
+      lockColor={[Function]}
+    />
+  </div>
+  <button
+    className="generate-palette-button"
+    onClick={[Function]}
+    type="button"
+  >
+    Generate New Palette
+  </button>
+  <PaletteForm
+    currentPalette={
+      Object {
+        "color1": Object {
+          "color": "",
+          "id": 1,
+          "locked": false,
+        },
+        "color2": Object {
+          "color": "",
+          "id": 2,
+          "locked": false,
+        },
+        "color3": Object {
+          "color": "",
+          "id": 3,
+          "locked": false,
+        },
+        "color4": Object {
+          "color": "",
+          "id": 4,
+          "locked": false,
+        },
+        "color5": Object {
+          "color": "",
+          "id": 5,
+          "locked": false,
+        },
+      }
+    }
+  />
+</section>
+`;

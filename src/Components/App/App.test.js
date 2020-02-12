@@ -3,8 +3,14 @@ import { render } from '@testing-library/react';
 import App from './App';
 import { shallow } from 'enzyme';
 
-describe('', () => {
-  it('should', () => {
+describe('App', () => {
+  let wrapper;
 
-  })
+  beforeEach(() => {
+    wrapper = shallow(<App />)
+  });
+
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 });
