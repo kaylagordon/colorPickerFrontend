@@ -3,13 +3,14 @@ import './Palette.scss';
 import PropTypes from 'prop-types';
 import { deletePalette } from '../../actions';
 import { useDispatch } from 'react-redux';
-
+import { apiRequest } from '../../utils/api';
 
 function Palette({ palette }) {
   const dispatch = useDispatch();
 
   const removePalette = () => {
     dispatch(deletePalette(palette.id));
+    apiRequest('palettes', 'DELETE', palette.id);
   };
 
   return (
