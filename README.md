@@ -1,12 +1,13 @@
 ## PALETTE PICKER (Front End)
 ### Mod 4 Paired Project at Turing School of Software & Design
-### [Click Here to Launch Frontend App](https://colorpickerfrontend.herokuapp.com/)  
-
-![play](https://media.giphy.com/media/XGmBgr8V02DrrqFpYd/giphy.gif)
-
+ 
 ## Dev Squad
 [Benjamin Firth](https://github.com/benjamin-firth)  
 [Kayla Wood](https://github.com/kaylaewood)  
+
+### [Click Here to Launch Frontend App](https://colorpickerfrontend.herokuapp.com/) 
+
+![play](https://media.giphy.com/media/XGmBgr8V02DrrqFpYd/giphy.gif)
 
 ### ABOUT
 This app was built to help people increase their math fluency in three areas: simplifying, factoring, and deriving. Users can choose their topic of study and the time they would like to spend practicing. During the round, users will answer questions. If the answer is correct, a new card will appear. If the answer is incorrect, the user can change their answer. After the round is played, users will see their stats.
