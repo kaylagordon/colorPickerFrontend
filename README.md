@@ -5,7 +5,7 @@
 [Benjamin Firth](https://github.com/benjamin-firth)  
 [Kayla Wood](https://github.com/kaylaewood)  
 
-### [Click Here to Launch Frontend App](https://colorpickerfrontend.herokuapp.com/) 
+### [Click Here](https://colorpickerfrontend.herokuapp.com/) to Launch Frontend App
 
 ![play](https://media.giphy.com/media/XGmBgr8V02DrrqFpYd/giphy.gif)
 
