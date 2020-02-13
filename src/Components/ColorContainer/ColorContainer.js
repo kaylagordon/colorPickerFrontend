@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PaletteForm from '../PaletteForm/PaletteForm';
 import './ColorContainer.scss';
 import ColorCard from '../ColorCard/ColorCard';
-import PropTypes from 'prop-types';
 
 export const ColorContainer = () => {
 

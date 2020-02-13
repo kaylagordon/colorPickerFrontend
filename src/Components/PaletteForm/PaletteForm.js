@@ -60,4 +60,8 @@ function PaletteForm({ currentPalette }) {
   );
 };
 
+PaletteForm.propTypes = {
+  currentPalette: PropTypes.object
+};
+
 export default PaletteForm;

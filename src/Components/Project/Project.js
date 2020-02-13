@@ -45,4 +45,9 @@ function Project({ projectInfo, palettes }) {
   );
 };
 
+Project.propTypes = {
+  projectInfo: PropTypes.object,
+  palettes: PropTypes.array
+};
+
 export default Project;

@@ -4,7 +4,6 @@ import { apiRequest } from '../../utils/api';
 import { setAllProjects, setAllPalettes } from '../../actions';
 import './ProjectContainer.scss';
 import Project from '../Project/Project';
-import PropTypes from 'prop-types';
 
 const ProjectContainer = () => {
   const dispatch = useDispatch();

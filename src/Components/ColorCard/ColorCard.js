@@ -23,4 +23,9 @@ function ColorCard({ cardColor, lockColor }) {
   );
 };
 
+ColorCard.propTypes = {
+  cardColor: PropTypes.object,
+  lockColor: PropTypes.func
+};
+
 export default ColorCard;
