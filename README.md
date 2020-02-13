@@ -9,9 +9,9 @@
 ### [Click here](https://github.com/kaylaewood/palettePickerBackend) to view the backend repo for this project.
 
 ### ABOUT
-This app was built to help people increase their math fluency in three areas: simplifying, factoring, and deriving. Users can choose their topic of study and the time they would like to spend practicing. During the round, users will answer questions. If the answer is correct, a new card will appear. If the answer is incorrect, the user can change their answer. After the round is played, users will see their stats.
+This app enables users to find and save color palettes for projects. Users can generate random palettes, lock the colors they like, and then regenerate the colors they don't. Then, users can create projects and assign palettes to projects. Users can also delete projects and palettes.
 
-The problem sets are created using methods that generate random numbers and problem structures. Fetch calls are made to the [Newton API](https://github.com/aunyks/newton-api) to check user answers. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This project has a robust testing suite.
+For this application, we built the backend and frontend from scratch. The frontend was built with React Hooks and Redux. The backend was build with Node.js, Express, knex, and postgreSQL. Everything was tested using Jest and Enzyme. Fetch calls are made to our [heroku hosted API](http://palettepickerapp.herokuapp.com/api/v1/projects). This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This project has a robust testing suite.
 
 ### DEV SET UP INSTRUCTIONS
 - `git clone` this repo
@@ -21,8 +21,15 @@ The problem sets are created using methods that generate random numbers and prob
 - Run `npm test` to view testing suite
 
 ### FRONTEND TECHNOLOGIES USED
-- React with Hooks
+- React Hooks
 - Redux
-- Jest/Enzyme
 - Fetch API
 - Sass
+- Jest/Enzyme
+
+### BACKEND TECHNOLOGIES USED
+- Node.js
+- Express
+- Knex
+- PostgreSQL
+- Jest/Enzyme
