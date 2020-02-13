@@ -10,6 +10,7 @@ exports[`PaletteForm should match the snapshot 1`] = `
   >
     <option
       id={1}
+      key="1"
       value={1}
     >
       Test
