@@ -1,4 +1,4 @@
-# PALETTE PICKER (Front End)
+# PALETTE PICKER (Frontend)
 ## Mod 4 Paired Project at Turing School of Software & Design
  
 ## Dev Squad: [Benjamin Firth](https://github.com/benjamin-firth) & [Kayla Wood](https://github.com/kaylaewood)  
