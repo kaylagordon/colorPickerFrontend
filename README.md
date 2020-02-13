@@ -1,12 +1,10 @@
 ## PALETTE PICKER (Front End)
 ### Mod 4 Paired Project at Turing School of Software & Design
  
-## Dev Squad
-[Benjamin Firth](https://github.com/benjamin-firth)  
-[Kayla Wood](https://github.com/kaylaewood)  
+### Dev Squad: [Benjamin Firth](https://github.com/benjamin-firth) & [Kayla Wood](https://github.com/kaylaewood)  
 
-### [Click here](https://colorpickerfrontend.herokuapp.com/) to Launch Frontend App.
-### [Click here](https://github.com/kaylaewood/palettePickerBackend) to view the backend repo for this project.
+#### [Click here](https://colorpickerfrontend.herokuapp.com/) to Launch Frontend App.
+#### [Click here](https://github.com/kaylaewood/palettePickerBackend) to view the backend repo for this project.
 
 ![play](https://media.giphy.com/media/XGmBgr8V02DrrqFpYd/giphy.gif)
 
