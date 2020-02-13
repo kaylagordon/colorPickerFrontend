@@ -39,4 +39,8 @@ function Palette({ palette }) {
   );
 }
 
+Palette.propTypes = {
+  palette: PropTypes.object
+};
+
 export default Palette;
