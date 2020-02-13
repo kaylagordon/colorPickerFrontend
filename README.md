@@ -6,6 +6,7 @@
 [Kayla Wood](https://github.com/kaylaewood)  
 
 ### [Click Here](https://colorpickerfrontend.herokuapp.com/) to Launch Frontend App
+## Click [here](https://github.com/kaylaewood/palettePickerBackend) to view the backend repo for this project.
 
 ![play](https://media.giphy.com/media/XGmBgr8V02DrrqFpYd/giphy.gif)
 
@@ -14,32 +15,16 @@ This app was built to help people increase their math fluency in three areas: si
 
 The problem sets are created using methods that generate random numbers and problem structures. Fetch calls are made to the [Newton API](https://github.com/aunyks/newton-api) to check user answers. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This project has a robust testing suite.
 
-NOTE: Click [here](https://github.com/kaylaewood/math4you-hooks) to see this projects with React Hooks implemented!
-
-### INSTRUCTIONS
+### DEV SET UP INSTRUCTIONS
 - `git clone` this repo
 - `cd` into that directory
 - Run `npm install`
 - Run `npm start` and open your browser to the indicated url
 - Run `npm test` to view testing suite
 
-### TECHNOLOGIES USED
-- React
+### FRONTEND TECHNOLOGIES USED
+- React with Hooks
 - Redux
 - Jest/Enzyme
 - Fetch API
 - Sass
-
-### WINS
-- Creatively approaching how to create large problem set without hard-coding problems
-- Clean UX/UI
-- Robust testing suite
-- Adding a timer to the display
-- Robust testing suite
-
-### CHALLENGES
-- Testing methods in functional components
-
-### FUTURE ITERATIONS
-- Create user profiles that hold past records and create challenges for beating old scores
-- Ensure that all factoring problems are solvable
